@@ -79,7 +79,7 @@ The project integrates various Azure data engineering and analytical tools:
 
 ## <u>Project Methodology</u>
 
-<u>#### 1. Getting Started</u>
+#### <u>1. Getting Started </u>
 
 <ul>
   <li>
@@ -108,8 +108,49 @@ The project integrates various Azure data engineering and analytical tools:
   </li>
 </ul>
 
+#### <u>2. Data Ingestion</u>
 
+Raw datasets downloaded from Ergast API have been directly uploaded in to the <b>Raw container</b> created in Azure Data Lake Storage. The datasets were organized in to 3 folders for 3 different dates to faciliate incremental load which will based on these dates. Multiple datasets in csv and json format were available. 
 
+#### <u>3. Data Processing</u>
 
+<ul>
+  <li>
+    The datsets from Raw container were imported in Azure Databricks as <i>Dataframes</i> on which data pre-processing was applied utilizing PySpark. 
+  </li>
+  <li>
+    Standard data pre-processing techniques like handling null values, type formatting, standardizing formats were applied.
+  </li>
+  <li>
+    The processed dataframes were saved as tables in Delta Lakes in the <b>Silver layer</b>, which is the <i>processed</i> container in the Azure Data Lake Storage. 
+  </li>
+  <li>
+    Delta Lakes are optimsed storage layer that supports ACID transaction. Delta Lakes facilitates CRUD operations, reliability, time travel and faster querying.
+  </li>
+</ul>
+
+#### <u>4. Data Transformation
+ <ul>
+   <li>
+     The processed data from Silver Layer were imported in Azure Databricks as <i>Dataframes</i> on which tranformation techniques were applied utilizing PySpark and Spark SQL
+   </li>
+    <li>
+      Tranformation techniques like aggreagations, joining, and model structuring were applied.
+    </li>
+   <li>
+     Utilizing views in Spark SQL 3 <b>Dimensional Tables</b> and 1 <b>Fact table</b> were created and were stored in Delta Lake.
+   </li>
+ </ul>
+
+#### <u>5. ETL workflows</u>
+
+<ul>
+  <li>
+    ETL workflow comprises of 2 pipelines: <b>Ingestion</b> and <b>Transformation</b>. The pipelines were created and published in Azure Data Factory.
+  </li>
+  <li>
+    <b>Ingestion Pipeline: </b>
+  </li>
+</ul>
 
 
