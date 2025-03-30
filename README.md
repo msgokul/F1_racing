@@ -5,7 +5,8 @@ This project demosntrates an end-to-end data engineering pipeline solution to de
 
 ### Medallion Architecture
 
-![Medallion Architecture](https://github.com/user-attachments/assets/0b22dc24-1dcc-422c-9f94-dd87ccb51df3)
+![Medallion Architecture](https://github.com/user-attachments/assets/fb66abbf-6988-4788-9ca0-67ecfb9a6597)
+
 
 The project is build upon Medallion Architecture where the data in different form passes through 3 stages to obtain the final output. The 3 stages are:
 <ol type="1">
@@ -13,14 +14,14 @@ The project is build upon Medallion Architecture where the data in different for
   <b>Bronze Layer (Raw Data)</b>: Raw datasets in the csv and json format downloaded from Ergast API were ingested and stored .
   </li>
   <li>
-  <b>Silver Layer (Processed Data)</b>: The raw datasets from the Bronze Layer were invoked in this layer and simple data pre-processing techniques like handing null entries, standardizing formats, type formatting and so on were applied.
+  <b>Silver Layer (Processed Data)</b>: The raw datasets from the Bronze Layer were invoked in this layer and simple data pre-processing techniques like handing null entries, standardizing formats, type formatting and so on were applied The processed datasets were stored in <b>Parquet format</b>.
   </li>
   <li>
-  <b>Gold Layer (Transformed Data)</b>: The processed datasets from the Silver Layer were invoked in this layer and applied transformation techinques like aggregation, joining, model structuring were applied in order to produce meaningful reports.
+  <b>Gold Layer (Transformed Data)</b>: The processed datasets from the Silver Layer were invoked in this layer and applied transformation techinques like aggregation, joining, model structuring were applied in order to produce meaningful reports. The transformed data were stored in <b>Delta Lake</b> which supports ACID transactions, time travel and stores audit logs.
   </li>
 </ol>
 
-### Datsets
+### Datasets
 
 The image below depicts the Entity Relationship Duiagram of the datasets. The data model follows a structured approach based on an Entity Relationship Diagram (ERD) to ensure seamless data integration and analysis.
 
@@ -53,6 +54,29 @@ The image below depicts the Entity Relationship Duiagram of the datasets. The da
     <b>Results:</b> Includes data regarding the results of a specific race like driver details, constructor details, positions and points
   </li>
 </ul>
+
+### Tools & Technologies Used
+
+The project integrates various Azure data engineering and analytical tools:
+
+<ul>
+  <li>
+    <b>Azure Data Lake Storage Gen2:</b> Stores data passing through different stages in containers. 
+  </li>
+  <li>
+    <b>Azure Key Vault & Azure Active Directory:</b> Facilitates authentication, secrets management and protection of sensitive data.
+  </li>
+  <li>
+    <b>Azure Databricks:</b> To author workbooks for implementing various techniques like data ingestion, data processing and data tranformation
+  </li>
+  <li>
+    <b>Azure Data Factory:</b> Manages ETL workflows for data ingestion, data processing and data transformation
+  </li>
+  <li>
+    <b>Power BI:</b> Creates interactive reports and visual analytics
+  </li>
+</ul>
+
 
 
 
