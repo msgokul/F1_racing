@@ -8,7 +8,7 @@ This project demosntrates an end-to-end data engineering pipeline solution to de
 ![Medallion Architecture](https://github.com/user-attachments/assets/0b22dc24-1dcc-422c-9f94-dd87ccb51df3)
 
 The project is build upon Medallion Architecture where the data in different form passes through 3 stages to obtain the final output. The 3 stages are:
-<ol type="1>
+<ol type="1">
   <li>
   <b>Bronze Layer (Raw Data)</b>: Raw datasets in the csv and json format downloaded from Ergast API were ingested and stored .
   </li>
