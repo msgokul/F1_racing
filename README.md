@@ -77,6 +77,36 @@ The project integrates various Azure data engineering and analytical tools:
   </li>
 </ul>
 
+## <u>Project Methodology</u>
+
+<u>#### 1. Getting Started</u>
+
+<ul>
+  <li>
+    Create Free account on <a href="https://portal.azure.com">Azure Portal.
+  </li>
+  <li>
+    Create a Resource Group that is specifc for the project.
+  </li>
+  <li>
+    Create resources within the Rescource Group which includes Azure Databricks, Azure Data Lake Storage (ADLS)and Azure Data Factory(ADF).
+  </li>
+  <li>
+    Create 3 containers in the ADLS namely <i>raw</i>, <i>processed</i>, <i>presentation</i>
+  </li>
+  <li>
+    Setup the workspace and clusters as required depending on the project in Azure Databricks
+  </li>
+  <li>
+    Configure ADF for creating workflows as needed for the project.
+  </li>
+  <li>
+    Create and setup Azure KeyVault and Azure Active Directory for secrets management and authentication
+  </li>
+  <li>
+    Establishing connection between Power BI and Delta Lake tables
+  </li>
+</ul>
 
 
 
