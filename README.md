@@ -67,7 +67,7 @@ The project integrates various Azure data engineering and analytical tools:
     <b>Azure Key Vault & Azure Active Directory:</b> Facilitates authentication, secrets management and protection of sensitive data.
   </li>
   <li>
-    <b>Azure Databricks:</b> To author workbooks for implementing various techniques like data ingestion, data processing and data tranformation
+    <b>Azure Databricks:</b> To author workbooks for implementing various techniques like data ingestion, data processing and data tranformation utilizing PySpark and Spark SQL.
   </li>
   <li>
     <b>Azure Data Factory:</b> Manages ETL workflows for data ingestion, data processing and data transformation
