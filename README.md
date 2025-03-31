@@ -175,7 +175,7 @@ To create the data model, a connection between PowerBI and Azure Databricks Delt
 
 ## <u>Conclusion</u>
 
-This project demonstrates a practical approach to implementing an Azure-based data engineering solution. By leveraging Azure Data Factory, Databricks, Azure Data Lake Storage and PowerBI, the project showcases how to build a scalable, efficient, and production-ready data pipeline with inteactive reports to analyze the key metrics. I also welcome all to fork my repository and to suggest any changes or updates. You can also contact me via <a href="https://mailto:msgokul2011@gmail.com">e-mail</a> or my <a href="https://www.linkedin.com/in/gokul-manoharan/">LinkedIn</a>. 
+This project demonstrates a practical approach to implementing an Azure-based data engineering solution. By leveraging Azure Data Factory, Databricks, Azure Data Lake Storage and PowerBI, the project showcases how to build a scalable, efficient, and production-ready data pipeline with inteactive reports to analyze the key metrics. I also welcome all to fork my repository and to suggest any changes or updates. You can also contact me via <a href="mailto:msgokul2011@gmail.com?Subject=Hello" target="_top">e-mail</a> or my <a href="https://www.linkedin.com/in/gokul-manoharan/">LinkedIn</a>. 
 
 
 
