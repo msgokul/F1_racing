@@ -162,7 +162,7 @@ A<b> Master pipeline</b> consisting of the above two pipelines connected seriall
 
 ### <u>6. Report Creation</u>
 
-After the master pipeline is run, all the created Azure Databricks notebooks will be executed creating the data models which is then used for creating interactive reports in Power BI. In this project analyses is done seoerately on Drivers and Constructors. The star schema developed for the project is shown below. 
+After the master pipeline is run, all the created Azure Databricks notebooks will be executed creating the data models which is then used for creating interactive reports in Power BI. In this project analysis is done seperately on Drivers and Constructors like finding Dominant drivers and constructors and more. The star schema developed for the project is shown below. 
 
 ![image](https://github.com/user-attachments/assets/4faa1ecc-0897-49ac-962e-5774fefae99a)
 
