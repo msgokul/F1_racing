@@ -23,7 +23,7 @@ The project is build upon Medallion Architecture where the data in different for
 
 ## <u>Datasets</u>
 
-The image below depicts the Entity Relationship Duiagram of the datasets. The data model follows a structured approach based on an Entity Relationship Diagram (ERD) to ensure seamless data integration and analysis.
+The image below depicts the Entity Relationship Diagram of the datasets. The data model follows a structured approach based on an Entity Relationship Diagram (ERD) to ensure seamless data integration and analysis.
 
 ![formula1_ergast_db_data_model](https://github.com/user-attachments/assets/f2e8a511-0ed1-43e3-a5aa-c891e0c0ac80)
 
@@ -146,11 +146,37 @@ Raw datasets downloaded from Ergast API have been directly uploaded in to the <b
 
 <ul>
   <li>
-    ETL workflow comprises of 2 pipelines: <b>Ingestion</b> and <b>Transformation</b>. The pipelines were created and published in Azure Data Factory.
+    ETL workflow comprises of 2 pipelines: <b>Transform</b> and <b>Analyze</b>. The pipelines were created and published in Azure Data Factory.
   </li>
   <li>
-    <b>Ingestion Pipeline: </b>
+    <b>Transform Pipeline: </b>In this pipeline, data stored in JSON and CSV format is read using Apache Spark with minimal transformation saved into a delta table. The transformation includes dropping columns, renaming headers, applying schema, and adding audited columns (ingestion_date and file_source) and file_date as the notebook parameter. This serves as a dynamic expression in ADF.
+  </li>
+  <li>
+    <b>Analyze Pipeline: </b>In the second pipeline, Databricks SQL reads preprocessed delta files and transforms them into the final dimensional model tables in delta format after perofrming analyzing techniques. Transformations performed include dropping duplicates, joining tables using join, and aggregating using window functions.
   </li>
 </ul>
+
+A<b> Master pipeline</b> consisting of the above two pipelines connected serially is made in order for smooth execution. 
+
+![ADF pipeline](https://github.com/user-attachments/assets/ee7ce6b3-2b1d-4449-b341-e8bb057679ee)
+
+### <u>6. Report Creation</u>
+
+After the master pipeline is run, all the created Azure Databricks notebooks will be executed creating the data models which is then used for creating interactive reports in Power BI. In this project analyses is done seoerately on Drivers and Constructors. The star schema developed for the project is shown below. 
+
+![image](https://github.com/user-attachments/assets/4faa1ecc-0897-49ac-962e-5774fefae99a)
+
+To create the data model, a connection between PowerBI and Azure Databricks Delta Lake Tables were made and the tables present in the Delta Lakes were imported into Power BI. The reports made from the above data model are shown below : 
+
+![Driver Report](https://github.com/user-attachments/assets/94a6801f-dfa3-4b6b-8e26-68504b068b10)
+
+
+![Constructor Report](https://github.com/user-attachments/assets/78b8769b-5c2f-44b8-b360-c256045d4470)
+
+## <u>Conclusion</u>
+
+This project demonstrates a practical approach to implementing an Azure-based data engineering solution. By leveraging Azure Data Factory, Databricks, Azure Data Lake Storage and PowerBI, the project showcases how to build a scalable, efficient, and production-ready data pipeline with inteactive reports to analyze the key metrics. I also welcome all to fork my repository and to suggest any changes or updates. You can also contact me via <a href="msgokul2011@gmail.com">e-mail</a> or my <a href="https://www.linkedin.com/in/gokul-manoharan/">LinkedIn</a>. 
+
+
 
 
