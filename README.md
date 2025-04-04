@@ -1,7 +1,7 @@
 # Azure End-to-End Project on Formula1 Racing dataset 
 
 ## <u>Introduction</u>
-This project demosntrates an end-to-end data engineering pipeline solution to derive useful information from raw Formula1 Racing dataset downloaded from Ergast API utlizing key Azure data engineering cloud services like Azure Data Lake Storage Gen2, Azure Key Vault, Azure Data Factory, and Azure Databricks. The useful information derived from the end stage of the project has been utilised to derive key insights by creating reports in Power BI. The project is build upon the Medallion Architecture. This project was developed as part of a <a href ="https://www.udemy.com/course/azure-databricks-spark-core-for-data-engineers/?couponCode=25BBPMXACCAGE2"> Udemy course </a> by Ramesh Retnasamy.
+This project demonstrates an end-to-end data engineering pipeline solution to derive useful information from raw Formula1 Racing dataset downloaded from Ergast API utilizing key Azure data engineering cloud services like Azure Data Lake Storage Gen2, Azure Key Vault, Azure Data Factory, and Azure Databricks. The useful information derived from the end stage of the project has been utilized to derive key insights by creating reports in Power BI. The project is build upon the Medallion Architecture. This project was developed as part of a <a href ="https://www.udemy.com/course/azure-databricks-spark-core-for-data-engineers/?couponCode=25BBPMXACCAGE2"> Udemy course </a> by Ramesh Retnasamy.
 
 ## <u>Medallion Architecture</u>
 
